@@ -22,11 +22,7 @@ jobs:
         run: |
           wttr=$(curl https://wttr.in/Paris)
           prompt="resume la météo à paris à partir de la réponse suivante : $wttr"
-          curl "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${{GEMINI_API_KEY}}" \
--H 'Content-Type: application/json' \
--X POST \
--d '{
-  "contents": [{
-    "parts":[{"text": "'prompt'"}]
-    }]
-   }'
+          curl "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${{secrets.GEMINI_API_KEY}}" \ 
+                  -H 'Content-Type:application/json' \
+                  -X POST \
+                  -d '{ "contents": [{"parts":[{"text": "'$prompt'"}]}] }'
