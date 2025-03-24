@@ -20,4 +20,4 @@ jobs:
 
       - name: Get the weather
         run: wttr=curl wttr.in/Paris
-        echo "$wttr"
+          echo "$wttr"
