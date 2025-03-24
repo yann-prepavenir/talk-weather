@@ -1,6 +1,5 @@
 # Nom du workflow
 name: Talk Weather
-
 # Déclencheurs de l'action
 on:
   push:
