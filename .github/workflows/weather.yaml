@@ -2,6 +2,9 @@
 name: Talk Weather
 #déclencheur de l'actionaction
 on:
+  push:
+    branches:
+      - main
   schedule: # Run every 5 minutes
   #chaque 2 minutes
     - cron:  '*/2 * * * *'
