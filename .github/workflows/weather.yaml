@@ -19,5 +19,5 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Get the weather
-        run: $wttr = curl wttr.in/Paris
-        echo $wttr
+        run: wttr=curl wttr.in/Paris
+        echo "$wttr"
